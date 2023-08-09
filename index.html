@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        <h3>Lee: <span id="lee"></span></h3><button onclick="leePoint()">Add Point to Lee</button>
-        <h3>Maria: <span id="maria"></span></h3><button onclick="mariaPoint()">Add Point to Maria</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Game Counter</title>
+  </head>
+  <body class="bg-slate-700 text-white">
+    <h1 class="text-2xl px-5 pt-5">Dominos Counter</h1>
+    <div class="flex flex-col justify-center items-center h-screen text-2xl">
+      <div class="flex mb-3">
+        <h3>Lee - <span id="lee">0</span></h3>
+      </div>
+      <div class="flex">
+        <button
+          class="bg-sky-500 m-1 h-10 w-10 rounded-full"
+          onclick="updateScore('lee', -1)"
+        >
+          -
+        </button>
+        <button
+          class="bg-sky-500 ml-5 m-1 h-10 w-10 rounded-full"
+          onclick="updateScore('lee', 1)"
+        >
+          +
+        </button>
+      </div>
+      <div class="flex mt-12 mb-3">
+        <h3>Maria - <span id="maria">0</span></h3>
+      </div>
+      <div class="flex">
+        <button
+          class="bg-sky-500 m-1 h-10 w-10 rounded-full"
+          onclick="updateScore('maria', -1)"
+        >
+          -
+        </button>
+        <button
+          class="bg-sky-500 ml-5 m-1 h-10 w-10 rounded-full"
+          onclick="updateScore('maria', 1)"
+        >
+          +
+        </button>
+      </div>
+      <h3 class="mt-12">Total Games - <span id="total">0</span></h3>
     </div>
-<script src="script.js"></script>
-</body>
+  </body>
 </html>

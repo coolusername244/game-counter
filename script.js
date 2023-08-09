@@ -1,18 +1,17 @@
-let mariaScore = 0; 
-let leeScore = 0;
-let totalScore = +leeScore + +mariaScore;
+const scores = {
+  lee: 0,
+  maria: 0,
+};
 
-document.getElementById('lee').innerHTML = leeScore;
-document.getElementById('maria').innerHTML = mariaScore;
-document.getElementById('total').innerHTML = totalScore;
+const updateScore = (player, value) => {
+  if (scores[player] + value >= 0) {
+    scores[player] += value;
+    document.getElementById(player).textContent = scores[player];
+    updateTotalScore();
+  }
+};
 
-function leePoint() {
-    leeScore++;
-    document.getElementById('lee').innerHTML = leeScore;
-
-}
-
-function mariaPoint() {
-    mariaScore++;
-    document.getElementById('maria').innerHTML = mariaScore;
-}
+const updateTotalScore = () => {
+  const totalScore = scores.lee + scores.maria;
+  document.getElementById('total').textContent = totalScore;
+};
