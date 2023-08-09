@@ -10,4 +10,6 @@ Built to make that process easier
 
 Styled with Tailwind
 
-![app-screenshot](images/app-image.png)
+<div style="display: flex; justify-content: center; margin-top: 4em;">
+  <img src="images/app-image.png" alt="A beautiful sunset" width="250">
+</div>
